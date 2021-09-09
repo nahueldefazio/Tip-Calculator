@@ -29,14 +29,18 @@ function App() {
 
     return (
         <Fragment>
-            <div className={'container'}>
-                <Left handleClickTip={handleClickTip}
-                      handleChangeTip={handleChangeTip}
-                      handleChangeBill={handleChangeBill}
-                      numberBill={numberBill}
-                      numberTip={numberTip}
-                      handleChangePeople={handleChangePeople}/>
-                <Right numberTip={numberTip} numberBill={numberBill} numberPeople={numberPeolple}/>
+            <div className={'fondo'}>
+                <div className={'leftRightContainer'}>
+                    <div className={'container'}>
+                        <Left handleClickTip={handleClickTip}
+                              handleChangeTip={handleChangeTip}
+                              handleChangeBill={handleChangeBill}
+                              numberBill={numberBill}
+                              numberTip={numberTip}
+                              handleChangePeople={handleChangePeople}/>
+                        <Right numberTip={numberTip} numberBill={numberBill} numberPeople={numberPeolple}/>
+                    </div>
+                </div>
             </div>
         </Fragment>
     );

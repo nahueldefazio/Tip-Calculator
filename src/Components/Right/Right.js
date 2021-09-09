@@ -13,7 +13,7 @@ function Right(props) {
 
     return (
         <Fragment>
-            <div>
+            <div className={'background'}>
                 <div className={'containerRight'}>
                     <div>
                         <h6>Tip Amount</h6>
@@ -32,7 +32,7 @@ function Right(props) {
                         <p>$ {totalResult()}</p> {/* (142.55 / 5 + 4.27)*/}
                     </div>
                 </div>
-                <button className={'buttonRight'}> Reset</button>
+                <button className={'buttonRight'}> RESET </button>
             </div>
 
 

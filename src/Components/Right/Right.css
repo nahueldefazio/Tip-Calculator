@@ -2,7 +2,23 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+
 }
 .buttonRight{
     width: 100%;
+    border: 0;
+    background-color: hsl(172, 67%, 45%);
+}
+.background{
+    background-color: hsl(183, 100%, 15%);
+    padding: 1rem;
+    margin: 1rem;
+}
+
+p{
+    color:hsl(172, 67%, 45%)
+}
+
+h6{
+    margin: 0;
 }

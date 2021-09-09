@@ -12,13 +12,13 @@ function GridTip(props) {
                         return (
                             <div key={index}>
                                 <button value={tipValues / 100}
-                                        onClick={(e) => props.handleClickTip(e, props.bill)}>{tipValues}</button>
+                                        onClick={(e) => props.handleClickTip(e, props.bill)}>{tipValues}%</button>
                             </div>
                         )
                     }
                 )
                 }
-                <div><input type={'number'} onChange={(e) => props.handleChangeTip(e, props.bill)}/></div>
+                <div><input id={'custom'} placeholder={'Custom'} type={'number'} onChange={(e) => props.handleChangeTip(e, props.bill)}/></div>
             </div>
         </Fragment>
     );
