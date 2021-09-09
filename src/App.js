@@ -1,25 +1,45 @@
-import logo from './logo.svg';
 import './App.css';
+import {Fragment, useState} from "react";
+import Right from "./Components/Right/Right";
+import Left from "./Components/Left/Left";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [numberBill, setNumberBill] = useState(null)
+    const [numberPeolple, setNumberPeople] = useState(null)
+    const [numberTip, setNumberTip] = useState(null)
+
+    const handleClickTip = (e, bill) => {
+        setNumberTip(e.target.value * bill)
+    }
+
+    const handleChangeTip = (e, bill) => {
+        setNumberTip(e.target.value / 100 * bill)
+    }
+
+    const handleChangeBill = (bill) => {
+        setNumberBill(bill)
+    }
+
+    const handleChangePeople = (people) => {
+        setNumberPeople(people)
+    }
+
+
+    return (
+        <Fragment>
+            <div className={'container'}>
+                <Left handleClickTip={handleClickTip}
+                      handleChangeTip={handleChangeTip}
+                      handleChangeBill={handleChangeBill}
+                      numberBill={numberBill}
+                      numberTip={numberTip}
+                      handleChangePeople={handleChangePeople}/>
+                <Right numberTip={numberTip} numberBill={numberBill} numberPeople={numberPeolple}/>
+            </div>
+        </Fragment>
+    );
 }
 
 export default App;
