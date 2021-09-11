@@ -6,9 +6,10 @@ import Left from "./Components/Left/Left";
 
 function App() {
 
-    const [numberBill, setNumberBill] = useState(null)
-    const [numberPeolple, setNumberPeople] = useState(null)
-    const [numberTip, setNumberTip] = useState(null)
+    const [numberBill, setNumberBill] = useState(0)
+    const [numberPeolple, setNumberPeople] = useState(0)
+    const [numberTip, setNumberTip] = useState(0)
+    const [customTip, setCustomTip] = useState(0)
 
     const handleClickTip = (e, bill) => {
         setNumberTip(e.target.value * bill)
@@ -16,6 +17,7 @@ function App() {
 
     const handleChangeTip = (e, bill) => {
         setNumberTip(e.target.value / 100 * bill)
+        setCustomTip(e.target.value)
     }
 
     const handleChangeBill = (bill) => {
@@ -25,6 +27,19 @@ function App() {
     const handleChangePeople = (people) => {
         setNumberPeople(people)
     }
+
+    const handleChangeCustom = (custom) => {
+      setCustomTip(custom)
+    }
+
+    const handleClickReset = () =>{
+        setNumberBill(0.00)
+        setNumberPeople(0.00)
+        setNumberTip(0.00)
+        setCustomTip(0.00)
+
+    }
+
 
 
     return (
@@ -37,8 +52,15 @@ function App() {
                               handleChangeBill={handleChangeBill}
                               numberBill={numberBill}
                               numberTip={numberTip}
-                              handleChangePeople={handleChangePeople}/>
-                        <Right numberTip={numberTip} numberBill={numberBill} numberPeople={numberPeolple}/>
+                              numberPeople={numberPeolple}
+                              handleChangePeople={handleChangePeople}
+                              handleClickReset={handleClickReset}
+                              handleChangeCustom={handleChangeCustom}
+                              customTip={customTip}/>
+                        <Right numberTip={numberTip}
+                               numberBill={numberBill}
+                               numberPeople={numberPeolple}
+                               handleClickReset={handleClickReset}/>
                     </div>
                 </div>
             </div>

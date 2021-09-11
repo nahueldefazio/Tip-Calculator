@@ -4,6 +4,9 @@ import '../Left/GripTip.css'
 function GridTip(props) {
 
     const tipValues = [5, 10, 15, 25, 50];
+    const resetCustom  = () =>{
+        return props.customTip === 0 ? '' : props.customTip
+    }
 
     return (
         <Fragment>
@@ -18,7 +21,12 @@ function GridTip(props) {
                     }
                 )
                 }
-                <div><input id={'custom'} placeholder={'Custom'} type={'number'} onChange={(e) => props.handleChangeTip(e, props.bill)}/></div>
+                <div><input value={resetCustom()}
+                            id={'custom'}
+                            placeholder={'Custom'}
+                            type={'number'}
+                            onChange={(e) => props.handleChangeTip(e, props.bill)}/>
+                </div>
             </div>
         </Fragment>
     );

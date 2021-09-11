@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+body {
+  background-color: hsl(185, 41%, 84%);
+  font-family: 'Space Mono', monospace;
+  font-size: 24px;
+}
+
 .container{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -6,10 +14,6 @@
   left:50%;
   transform: translate(-50%, -50%);
   background-color: hsl(0, 0%, 100%);
-}
-.fondo{
-  background-color: hsl(185, 41%, 84%);
-  height: 1024px;
 }
 
 .leftRightContainer {

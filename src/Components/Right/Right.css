@@ -6,8 +6,15 @@
 }
 .buttonRight{
     width: 100%;
-    border: 0;
-    background-color: hsl(172, 67%, 45%);
+    background-color: rgba(13,104,109,255);
+    color:hsl(183, 100%, 15%);
+    border: none;
+    border-radius: 12px;
+    margin: 45px 0 0;
+    text-transform: uppercase;
+}
+.buttonRight:hover{
+    background-color: hsl(185, 41%, 84%);
 }
 .background{
     background-color: hsl(183, 100%, 15%);
@@ -16,9 +23,15 @@
 }
 
 p{
-    color:hsl(172, 67%, 45%)
+    color:hsl(172, 67%, 45%);
+    font-size: 30px;
+    margin: 0
 }
-
+span{
+    color: hsl(0, 0%, 57%);
+    font-size: 12px
+}
 h6{
+    color: hsl(0, 0%, 100%);
     margin: 0;
 }
