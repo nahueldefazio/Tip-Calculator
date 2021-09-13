@@ -4,9 +4,6 @@ import '../Left/GripTip.css'
 function GridTip(props) {
 
     const tipValues = [5, 10, 15, 25, 50];
-    const resetCustom  = () =>{
-        return props.customTip === 0 ? '' : props.customTip
-    }
 
     return (
         <Fragment>
@@ -15,13 +12,14 @@ function GridTip(props) {
                         return (
                             <div key={index}>
                                 <button value={tipValues / 100}
-                                        onClick={(e) => props.handleClickTip(e, props.bill)}>{tipValues}%</button>
+                                        className={props.selectedTip === index ? 'buttonTip' : 'pepe'}
+                                        onClick={(e) => {props.handleClickTip(e, props.bill); props.handleSelectedTip(index)}}>{tipValues}%</button>
                             </div>
                         )
                     }
                 )
                 }
-                <div><input value={resetCustom()}
+                <div><input value={props.numberTip}
                             id={'custom'}
                             placeholder={'Custom'}
                             type={'number'}

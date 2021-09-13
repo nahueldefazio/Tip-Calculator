@@ -14,14 +14,18 @@ input{
     font-size: 24px;
 
 }
-.regularTips{
-
+.regularTips:focus-visible{
+    outline: 1px solid #26c0ab !important;
 }
-.customTips{
 
+.error{
+    color: red;
+}
+.customTips:focus-visible{
+    outline: 1px solid #26c0ab !important;
 }
 .leftContainer{
-    margin: 1rem;
+    margin: 1.5rem;
 }
 h5{
     margin: 0;

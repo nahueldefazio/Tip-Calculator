@@ -6,15 +6,20 @@ import Left from "./Components/Left/Left";
 
 function App() {
 
-    const [numberBill, setNumberBill] = useState(0)
-    const [numberPeolple, setNumberPeople] = useState(0)
+    const [numberBill, setNumberBill] = useState('')
+    const [numberPeople, setNumberPeople] = useState('')
     const [numberTip, setNumberTip] = useState(0)
     const [customTip, setCustomTip] = useState(0)
+    const [selectedTip, setSelectedTip] = useState(null)
+
 
     const handleClickTip = (e, bill) => {
         setNumberTip(e.target.value * bill)
     }
-
+    const handleSelectedTip = (index) => {
+        console.log(index)
+      setSelectedTip(index)
+    }
     const handleChangeTip = (e, bill) => {
         setNumberTip(e.target.value / 100 * bill)
         setCustomTip(e.target.value)
@@ -29,18 +34,17 @@ function App() {
     }
 
     const handleChangeCustom = (custom) => {
-      setCustomTip(custom)
+        setCustomTip(custom)
     }
-
-    const handleClickReset = () =>{
-        setNumberBill(0.00)
-        setNumberPeople(0.00)
-        setNumberTip(0.00)
-        setCustomTip(0.00)
-
+    
+    
+    const handleClickReset = () => {
+        setNumberBill('')
+        setNumberPeople('')
+        setNumberTip('')
+        setCustomTip('')
+        setSelectedTip(null)
     }
-
-
 
     return (
         <Fragment>
@@ -52,14 +56,17 @@ function App() {
                               handleChangeBill={handleChangeBill}
                               numberBill={numberBill}
                               numberTip={numberTip}
-                              numberPeople={numberPeolple}
+                              numberPeople={numberPeople}
                               handleChangePeople={handleChangePeople}
                               handleClickReset={handleClickReset}
                               handleChangeCustom={handleChangeCustom}
-                              customTip={customTip}/>
+                              customTip={customTip}
+                              selectedTip={selectedTip}
+                              handleSelectedTip={handleSelectedTip}/>
+
                         <Right numberTip={numberTip}
                                numberBill={numberBill}
-                               numberPeople={numberPeolple}
+                               numberPeople={numberPeople}
                                handleClickReset={handleClickReset}/>
                     </div>
                 </div>
