@@ -20,6 +20,8 @@ input{
 
 .error{
     color: red;
+    display: flex;
+    width: max-content;
 }
 .customTips:focus-visible{
     outline: 1px solid #26c0ab !important;

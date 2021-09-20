@@ -9,7 +9,7 @@ function App() {
     const [numberBill, setNumberBill] = useState('')
     const [numberPeople, setNumberPeople] = useState('')
     const [numberTip, setNumberTip] = useState(0)
-    const [customTip, setCustomTip] = useState(0)
+    const [customTip, setCustomTip] = useState('')
     const [selectedTip, setSelectedTip] = useState(null)
 
 
@@ -18,7 +18,7 @@ function App() {
     }
     const handleSelectedTip = (index) => {
         console.log(index)
-      setSelectedTip(index)
+        setSelectedTip(index)
     }
     const handleChangeTip = (e, bill) => {
         setNumberTip(e.target.value / 100 * bill)
@@ -34,16 +34,17 @@ function App() {
     }
 
     const handleChangeCustom = (custom) => {
+        console.log(custom)
         setCustomTip(custom)
     }
-    
-    
+
+
     const handleClickReset = () => {
         setNumberBill('')
         setNumberPeople('')
         setNumberTip('')
         setCustomTip('')
-        setSelectedTip(null)
+        setSelectedTip('')
     }
 
     return (

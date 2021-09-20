@@ -13,19 +13,32 @@ function GridTip(props) {
                             <div key={index}>
                                 <button value={tipValues / 100}
                                         className={props.selectedTip === index ? 'buttonTip' : 'pepe'}
-                                        onClick={(e) => {props.handleClickTip(e, props.bill); props.handleSelectedTip(index)}}>{tipValues}%</button>
+                                        onClick={(e) => {
+                                            props.handleClickTip(e, props.bill);
+                                            props.handleSelectedTip(index)
+                                        }}>{tipValues}%
+                                </button>
                             </div>
                         )
                     }
                 )
                 }
-                <div><input value={props.numberTip}
-                            id={'custom'}
-                            placeholder={'Custom'}
-                            type={'number'}
-                            onChange={(e) => props.handleChangeTip(e, props.bill)}/>
+                <div>
+                    <input value={props.customTip}
+                           id={'custom'}
+                           placeholder={'Custom'}
+                           className={'customTips'}
+                           type={'number'}
+                           style={{
+                               outline: props.customTipError ? "1px solid red" : ''
+                           }}
+                           onChange={e => props.handleChangeTip(e, props.bill)}
+                           onBlur={e => props.handleInputError(e, 'custom')}/>
+
                 </div>
+
             </div>
+            {props.customTipError && <span className={'error customError'}>{props.customTipError}</span>}
         </Fragment>
     );
 }

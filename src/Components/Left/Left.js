@@ -5,8 +5,9 @@ import './Left.css'
 function Left(props) {
     const [tipError, setTipError] = useState('')
     const [peopleError, setPeopleError] = useState('')
+    const [customTipError, setCustomtipError] = useState('')
 
-    const handleInputError = (e, x) =>{
+    const handleInputError = (e, x) => {
         switch (x) {
             case "bill":
                 if (e.target.value < 0) {
@@ -15,11 +16,17 @@ function Left(props) {
                 } else setTipError('')
                 break;
             case "people":
-                if (e.target.value < 0) {
-                    setPeopleError("People can not be zero.")
+                if (e.target.value <= 0) {
+                    setPeopleError("People can not be zero or negative.")
                     props.handleChangePeople('')
-                }else setPeopleError('')
-                    break
+                } else setPeopleError('')
+                break
+            case "custom":
+                if (e.target.value < 0) {
+                    setCustomtipError("Tip can not be negative.")
+                    props.handleChangeCustom('')
+                } else setCustomtipError('')
+                break
         }
     }
 
@@ -35,8 +42,8 @@ function Left(props) {
                        }}
                        type={'number'}
                        onChange={e => props.handleChangeBill(e.target.value)}
-                       onBlur={e => handleInputError(e,'bill')}/>
-                {tipError && <span className={'error'}>Ingrese un numero mayor a 0</span>}
+                       onBlur={e => handleInputError(e, 'bill')}/>
+                {tipError && <span className={'error'}>{tipError}</span>}
                 <h5>Select Tip %</h5>
                 <GridTip bill={props.numberBill}
                          handleClickTip={props.handleClickTip}
@@ -44,7 +51,9 @@ function Left(props) {
                          customTip={props.customTip}
                          handleChangeCustom={props.handleChangeCustom}
                          selectedTip={props.selectedTip}
-                         handleSelectedTip={props.handleSelectedTip}/>
+                         handleSelectedTip={props.handleSelectedTip}
+                         handleInputError={handleInputError}
+                         customTipError={customTipError}/>
                 <h5>Number of people</h5>
                 <input placeholder={0}
                        value={props.numberPeople}
@@ -54,8 +63,8 @@ function Left(props) {
                        }}
                        type={'number'}
                        onChange={e => props.handleChangePeople(e.target.value)}
-                       onBlur={e => handleInputError(e,'people')}/>
-                {peopleError && <span className={'error'}>EROR</span>}
+                       onBlur={e => handleInputError(e, 'people')}/>
+                {peopleError && <span className={'error'}>{peopleError}</span>}
             </div>
         </Fragment>
     );
