@@ -19,21 +19,21 @@ function Right(props) {
             <form>
                 <div className={'background'}>
                     <div className={'containerRight'}>
-                        <div>
+                        <div className={'result-item'}>
                             <h6>Tip Amount</h6>
                             <span>/ person</span>
                         </div>
                         <div>
-                            <p> $ {tipResult()}</p>{/*(142.55 * 0.15 / 5)*/}
+                            <p>$ {tipResult()}</p>
                         </div>
                     </div>
                     <div className={'containerRight'}>
-                        <div>
+                        <div className={'result-item'}>
                             <h6>Total</h6>
                             <span>/ person</span>
                         </div>
                         <div>
-                            <p>$ {totalResult()}</p> {/* (142.55 / 5 + 4.27)*/}
+                            <p>$ {totalResult()}</p>
                         </div>
                     </div>
                     <button type={'reset'}

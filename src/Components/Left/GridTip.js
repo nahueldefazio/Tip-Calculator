@@ -27,11 +27,8 @@ function GridTip(props) {
                     <input value={props.customTip}
                            id={'custom'}
                            placeholder={'Custom'}
-                           className={'customTips'}
+                           className={`customTips ${props.customTipError ? 'error-border' : ''}`}
                            type={'number'}
-                           style={{
-                               outline: props.customTipError ? "1px solid red" : ''
-                           }}
                            onChange={e => props.handleChangeTip(e, props.bill)}
                            onBlur={e => props.handleInputError(e, 'custom')}/>
 

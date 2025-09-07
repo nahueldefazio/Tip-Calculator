@@ -1,70 +1,209 @@
-# Getting Started with Create React App
+# 💰 Tip Calculator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Una calculadora de propinas moderna y elegante construida con React, diseñada para calcular propinas y dividir cuentas de manera fácil y rápida.
 
-## Available Scripts
+![Tip Calculator](https://img.shields.io/badge/React-17.0.2-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen.svg)
 
-In the project directory, you can run:
+## ✨ Características
 
-### `npm start`
+- 🎨 **Diseño Moderno**: Interfaz elegante con efectos glassmorphism y animaciones fluidas
+- 📱 **Completamente Responsive**: Optimizado para desktop, tablet y móviles
+- ⚡ **Cálculos Instantáneos**: Resultados en tiempo real mientras escribes
+- 🎯 **Validación de Entrada**: Validación en tiempo real con mensajes de error claros
+- 🌈 **Efectos Visuales**: Animaciones suaves, sombras dinámicas y efectos hover
+- 💡 **Fácil de Usar**: Interfaz intuitiva con iconos descriptivos
+- 🔄 **Botón Reset**: Limpia todos los campos con un solo clic
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🚀 Demo en Vivo
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[Ver Demo](https://nahueldefazio.github.io/Tip-Calculator)
 
-### `npm test`
+## 📸 Capturas de Pantalla
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Desktop
+![Desktop View](src/design/desktop-design-completed.jpg)
 
-### `npm run build`
+### Mobile
+![Mobile View](src/design/mobile-design.jpg)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Tecnologías Utilizadas
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **React 17.0.2** - Framework principal
+- **CSS3** - Estilos avanzados con gradientes y animaciones
+- **JavaScript ES6+** - Lógica de la aplicación
+- **HTML5** - Estructura semántica
+- **GitHub Pages** - Hosting y despliegue
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📦 Instalación
 
-### `npm run eject`
+### Prerrequisitos
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Node.js (versión 14 o superior)
+- npm o yarn
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Pasos de Instalación
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. **Clona el repositorio**
+   ```bash
+   git clone https://github.com/nahueldefazio/Tip-Calculator.git
+   cd Tip-Calculator
+   ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+2. **Instala las dependencias**
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. **Ejecuta la aplicación**
+   ```bash
+   npm start
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. **Abre tu navegador**
+   ```
+   http://localhost:3000
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🎮 Cómo Usar
 
-### Code Splitting
+1. **Ingresa el monto de la cuenta** en el campo "Bill"
+2. **Selecciona el porcentaje de propina** (5%, 10%, 15%, 25%, 50%) o ingresa un valor personalizado
+3. **Especifica el número de personas** para dividir la cuenta
+4. **Ve los resultados** automáticamente calculados:
+   - Propina por persona
+   - Total por persona
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🎨 Características de Diseño
 
-### Analyzing the Bundle Size
+### Efectos Visuales
+- **Glassmorphism**: Efectos de vidrio con backdrop-filter
+- **Gradientes Dinámicos**: Fondos con múltiples puntos de color
+- **Animaciones CSS**: Transiciones suaves con cubic-bezier personalizado
+- **Sombras Multicapa**: Efectos de profundidad y elevación
+- **Micro-interacciones**: Efectos hover y focus en todos los elementos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Paleta de Colores
+- **Primario**: `hsl(183, 100%, 15%)` - Verde azulado oscuro
+- **Secundario**: `hsl(172, 67%, 45%)` - Verde azulado claro
+- **Acento**: `hsl(185, 41%, 84%)` - Verde azulado muy claro
+- **Fondo**: `hsl(189, 41%, 97%)` - Gris muy claro
+- **Error**: `#e74c3c` - Rojo para validaciones
 
-### Making a Progressive Web App
+### Tipografía
+- **Fuente Principal**: Space Mono (Google Fonts)
+- **Pesos**: 400 (Regular), 700 (Bold)
+- **Jerarquía**: Títulos, subtítulos y texto con diferentes tamaños
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📱 Diseño Responsive
 
-### Advanced Configuration
+### Breakpoints
+- **Desktop**: > 1024px
+- **Tablet**: 768px - 1024px
+- **Mobile Large**: 480px - 768px
+- **Mobile Medium**: 320px - 480px
+- **Mobile Small**: < 320px
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Adaptaciones
+- **Layout**: Grid de 2 columnas → 1 columna en móviles
+- **Tipografía**: Tamaños escalables según dispositivo
+- **Espaciado**: Padding y margin adaptativos
+- **Botones**: Tamaños optimizados para touch
 
-### Deployment
+## 🔧 Estructura del Proyecto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+src/
+├── Components/
+│   ├── Left/
+│   │   ├── Left.js          # Componente principal izquierdo
+│   │   ├── Left.css         # Estilos del panel izquierdo
+│   │   ├── GridTip.js       # Grilla de botones de propina
+│   │   └── GripTip.css      # Estilos de la grilla
+│   └── Right/
+│       ├── Right.js         # Componente del panel derecho
+│       └── Right.css        # Estilos del panel derecho
+├── design/                  # Imágenes de diseño
+├── images/                  # Iconos y assets
+├── App.js                   # Componente principal
+├── App.css                  # Estilos globales
+├── index.js                 # Punto de entrada
+└── index.css                # Estilos base
+```
 
-### `npm run build` fails to minify
+## 🎯 Funcionalidades
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Cálculos
+- **Propina por persona**: `(Monto × Porcentaje) ÷ Personas`
+- **Total por persona**: `(Monto ÷ Personas) + Propina por persona`
+- **Validación**: Números positivos y no nulos
+- **Precisión**: Redondeo a 2 decimales
+
+### Validaciones
+- **Bill**: No puede ser negativo
+- **People**: No puede ser cero o negativo
+- **Custom Tip**: No puede ser negativo
+- **Feedback Visual**: Bordes rojos y mensajes de error
+
+### Estados
+- **Normal**: Campos con bordes sutiles
+- **Hover**: Efectos de elevación y cambio de color
+- **Focus**: Bordes destacados y efectos de glow
+- **Error**: Bordes rojos con sombras de error
+- **Seleccionado**: Botón de propina con animación pulse
+
+## 🚀 Despliegue
+
+### GitHub Pages
+```bash
+npm run build
+npm run deploy
+```
+
+### Netlify
+1. Conecta tu repositorio de GitHub
+2. Configura el build command: `npm run build`
+3. Configura el publish directory: `build`
+
+### Vercel
+```bash
+npm install -g vercel
+vercel
+```
+
+## 🤝 Contribuir
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## 📝 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
+
+## 👨‍💻 Autor
+
+**Nahuel De Fazio**
+- GitHub: [@nahueldefazio](https://github.com/nahueldefazio)
+- LinkedIn: [Nahuel De Fazio](https://linkedin.com/in/nahueldefazio)
+
+## 🙏 Agradecimientos
+
+- [Frontend Mentor](https://www.frontendmentor.io/) por el desafío de diseño
+- [Google Fonts](https://fonts.google.com/) por la fuente Space Mono
+- [React](https://reactjs.org/) por el framework increíble
+- Comunidad de desarrolladores por la inspiración
+
+## 📊 Estadísticas
+
+![GitHub stars](https://img.shields.io/github/stars/nahueldefazio/Tip-Calculator?style=social)
+![GitHub forks](https://img.shields.io/github/forks/nahueldefazio/Tip-Calculator?style=social)
+![GitHub issues](https://img.shields.io/github/issues/nahueldefazio/Tip-Calculator)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/nahueldefazio/Tip-Calculator)
+
+---
+
+⭐ **¡Si te gusta este proyecto, no olvides darle una estrella!** ⭐
